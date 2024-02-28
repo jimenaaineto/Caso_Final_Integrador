@@ -1,11 +1,11 @@
-private class HAcuatico extends Habitat{
+private class HabitatAcuatico extends Habitat{
 
     private int cantidadEspeciesA;
     private int cantidadAcuarios;
     private String naturalezaMarina;
     int aforoA;
 
-    public HAcuatico(int temperatura, int humedad, String limpieza, int aforoA int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
+    public HabitatAcuatico(int temperatura, int humedad, String limpieza, int aforoA int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
         super(temperatura, humedad, limpieza);
         this.cantidadAcuarios=cantidadAcuarios;
         this.cantidadEspeciesA=cantidadEspeciesA;

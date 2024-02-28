@@ -5,12 +5,14 @@ public class Animales {
     private String tamaño;
     private String origen;
     private String nombre;
+    private boolean reproduccion;
 
-    public Animales(int edad, String tamaño, String origen, String nombre) {
+    public Animales(int edad, String tamaño, String origen, String nombre, boolean reproduccion) {
         this.edad = edad;
         this.tamaño = tamaño;
         this.origen = origen;
         this.nombre = nombre;
+        this.reproduccion=reproduccion;
     }
 
     public int getEdad() {
@@ -43,6 +45,14 @@ public class Animales {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public boolean isReproduccion(){
+        return reproduccion;
+    }
+
+    public void setReproduccion(boolean reproduccion){
+        this.reproduccion=reproduccion;
     }
 }
 
