@@ -1,37 +1,35 @@
 package Caso;
 
-public class Habitat{
-
+public class Habitat {
         private int temperatura;
         private int humedad;
         private String limpieza;
 
-    
-    } 
-
-    public class HTerrestre extends Habitat{
-        public HTerrestre(int Ttemperatura, int Thumedad, String Tlimpieza){
-            this.temperatura=Ttemperatura;
-            this.humedad=Thumedad;
-            this.limpieza=Tlimpieza;
+        public Habitat(int temperatura, int humedad, String limpieza){
+            this.temperatura=temperatura;
+            this.humedad=humedad;
+            this.limpieza=limpieza;
         }
-
-    }
-
-    public class HAcuatico extends Habitat{
-        public HAcuatico(int Atemperatura, int Ahumedad, String Alimpieza){
-            this.temperatura=Atemperatura;
-            this.humedad=Ahumedad;
-            this.limpieza=Alimpieza;
-
-    }
+public int getHumedad() {
+    return humedad;
 }
-
-    public class Haviario extends Habitat{
-        public HAviario(int Atemperatura, int Ahumedad, String Alimpieza){
-            this.temperatura=Atemperatura;
-            this.humedad=Ahumedad;
-            this.limpieza=Alimpieza;
-
-    }
+public void setHumedad(int humedad) {
+    this.humedad = humedad;
 }
+public String getLimpieza() {
+    return limpieza;
+}
+public void setLimpieza(String limpieza) {
+    this.limpieza = limpieza;
+}
+public int getTemperatura() {
+    return temperatura;
+}
+public void setTemperatura(int temperatura) {
+    this.temperatura = temperatura;
+}
+    }
+
+
+
+    
