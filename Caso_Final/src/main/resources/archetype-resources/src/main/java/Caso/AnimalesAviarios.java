@@ -3,7 +3,7 @@ private class AnimalesAviarios extends Animales{
     private String ecosistemaAves;
     private boolean nadarAves;
 
-    public AnimalesAcuaticos(int alimentacionAves, String ecosistemaAves, boolean nadarAves, int edad, String tamaño, String origen, String nombre, boolean reproduccion){
+    public AnimalesAviarios(int edad, String tamaño, String origen, String nombre, boolean reproduccion, String alimentacionAves, String ecosistemaAves, boolean nadarAves){
         super(edad, tamaño, origen, nombre, reproduccion);
         this.alimentacionAves=alimentacionAves;
         this.ecosistemaAves=ecosistemaAves;

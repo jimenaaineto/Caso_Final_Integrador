@@ -42,9 +42,3 @@ private class HabitatAviario extends Habitat{
         this.aforoAves=aforoAves;
     }
 }
-
-   
-
-    
-       
-        }
