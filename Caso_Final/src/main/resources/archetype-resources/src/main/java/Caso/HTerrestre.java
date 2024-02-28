@@ -5,8 +5,8 @@ private class HTerrestre extends Habitat{
     private int cantidadCharcas;
     private String naturalezaTerrestre;
 
-    public HTerrestre(int cantidadCharcas, int cantidadEspeciesT, String naturalezaTerrestre){
-        super(int temperatura, int humedad, String limpieza);
+    public HTerrestre(int temperatura, int humedad, String limpieza, int cantidadCharcas, int cantidadEspeciesT, String naturalezaTerrestre){
+        super(temperatura, humedad, limpieza);
         this.cantidadCharcas=cantidadCharcas;
         this.cantidadEspeciesT=cantidadEspeciesT;
         this.naturalezaTerrestre=naturalezaTerrestre;
