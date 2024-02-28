@@ -14,7 +14,7 @@ private class AnimalesAviarios extends Animales{
         return alimentacionAves;
     }
 
-    public void setAlimentacionAves(String alimentacionA) {
+    public void setAlimentacionAves(String alimentacionAves) {
         this.alimentacionAves = alimentacionAves;
     }
 
