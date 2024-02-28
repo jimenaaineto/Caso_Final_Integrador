@@ -33,7 +33,5 @@ private class HAcuatico extends Habitat{
     public void setNaturalezaMarina(String naturalezaMarina) {
         this.naturalezaMarina = naturalezaMarina;
     }
-
-    
        
         }
