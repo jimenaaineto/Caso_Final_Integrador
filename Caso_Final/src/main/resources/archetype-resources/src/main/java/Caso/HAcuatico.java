@@ -3,12 +3,14 @@ private class HAcuatico extends Habitat{
     private int cantidadEspeciesA;
     private int cantidadAcuarios;
     private String naturalezaMarina;
+    int aforoA;
 
-    public HAcuatico(int temperatura, int humedad, String limpieza, int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
+    public HAcuatico(int temperatura, int humedad, String limpieza, int aforoA int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
         super(temperatura, humedad, limpieza);
         this.cantidadAcuarios=cantidadAcuarios;
         this.cantidadEspeciesA=cantidadEspeciesA;
         this.naturalezaMarina=naturalezaMarina;
+        this.aforoA=aforoA;
     }
     public int getCantidadEspeciesA() {
         return cantidadEspeciesA;
@@ -33,5 +35,10 @@ private class HAcuatico extends Habitat{
     public void setNaturalezaMarina(String naturalezaMarina) {
         this.naturalezaMarina = naturalezaMarina;
     }
-       
+    public int getaforoA(){
+        return aforoA;
+    }
+    public void setaforoA(int aforoA){
+        this.aforoA=aforoA;
+    }
         }

@@ -2,13 +2,15 @@ private class HAviario extends Habitat{
 
     private int cantidadEspeciesAves;
     private int cantidadNidos;
+    int aforoAves;
     private String naturalezaAviaria;
 
-     public HAcuatico(int temperatura, int humedad, String limpieza, int cantidadNidos, int cantidadEspeciesAves, String naturalezaAviaria){
+     public HAcuatico(int temperatura, int humedad, String limpieza, int aforoAves, int cantidadNidos, int cantidadEspeciesAves, String naturalezaAviaria){
         super(temperatura, humedad, limpieza);
         this.cantidadNidos=cantidadNidos;
         this.cantidadEspeciesAves=cantidadEspeciesAves;
         this.naturalezaAviaria=naturalezaAviaria;
+        this.aforoAves=aforoAves;
     }
     public int getCantidadEspeciesAves() {
         return cantidadEspeciesAves;
@@ -32,6 +34,12 @@ private class HAviario extends Habitat{
 
     public void setNaturalezaAviaria(String naturalezaAviaria) {
         this.naturalezaAviaria = naturalezaAviaria;
+    }
+    public int getaforoAves(){
+        return aforoAves;
+    }
+    public void setaforoAves(int aforoAves){
+        this.aforoAves=aforoAves;
     }
 }
 

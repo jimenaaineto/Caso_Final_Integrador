@@ -6,6 +6,8 @@ public class Animales{
         private String origen;
         private int nombre;
 
+        public Animales (int edad)
+
     }
 
     public class Terrestres extends Animales{
