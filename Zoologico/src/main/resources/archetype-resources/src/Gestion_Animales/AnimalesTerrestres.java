@@ -1,16 +1,15 @@
 package Gestion_Animales;
-private class AnimalesTerrestres extends Animales{
     
     private class AnimalesTerrestres extends Animales{
         int numeroPatas;
         boolean pelaje;
         boolean caminar;
 
-        public AnimalesTerrestres(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id,boolean pico, boolean plumaje, boolean diurnos, boolean vuela){
+        public AnimalesTerrestres(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id,boolean pelaje, boolean caminar, boolean diurnos, int numeroPatas){
             super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
             this.numeroPatas=numeroPatas;
-            this.alimentacionT=alimentacionT;
-            this.nadarT=nadarT;
+            this.pelaje=pelaje;
+            this.caminar=caminar;
         }
 
         public int getNumeroPatas(){
@@ -21,20 +20,20 @@ private class AnimalesTerrestres extends Animales{
             this.numeroPatas=numeroPatas;
         }
 
-        public String getAlimentacionT(){
-            return alimentacionT;
+        public boolean howPelaje(){
+            return pelaje;
         }
 
-        public void setAlimentacionT(String alimentacionT){
-            this.alimentacionT=alimentacionT;
+        public void setPelaje(boolean pelaje){
+            this.pelaje=pelaje;
         }
 
-        public boolean isNadarT(){
-            return nadarT;
+        public boolean iscaminar(){
+            return caminar;
         }
 
-        public void setNadarT(boolean nadarT){
-            this.nadarT=nadarT;
+        public void setNadarT(boolean caminar){
+            this.caminar=caminar;
         }
 
         @Override
@@ -66,3 +65,4 @@ private class AnimalesTerrestres extends Animales{
         return super.hashCode();
     }
     }
+

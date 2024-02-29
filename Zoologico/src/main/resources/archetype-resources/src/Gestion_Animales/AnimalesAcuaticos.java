@@ -1,8 +1,8 @@
 package Gestion_Animales;
 private class AnimalesAcuaticos extends Animales{
-    private String tipoAgua;//cambiar en el archivo entero lo que era alimentacion
-    private boolean venenoso;//cambiar
-    private boolean aletas;
+    String tipoAgua;//cambiar en el archivo entero lo que era alimentacion
+    boolean venenoso;//cambiar
+    boolean aletas;
 
     public AnimalesAcuaticos(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id, String tipoAgua, boolean venenoso, boolean aletas){
         super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);  

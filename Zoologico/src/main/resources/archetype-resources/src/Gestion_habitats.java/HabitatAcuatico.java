@@ -1,5 +1,19 @@
 package Gestion_habitats;
 private class HabitatAcuatico extends Habitat {
+    
+    boolean puedeNadar;
+
+    public HabitatAcuatico(boolean puedeNadar, float temperatura, float humedad, boolean limpieza){
+        super(temperatura,humedad,limpieza);
+        this.puedeNadar=puedeNadar;
+    }
+    
+    public boolean howPuedeNadar(){
+        return puedeNadar;
+    }
+    public void setPuedeNadar(boolean puedeNadar){
+        this.puedeNadar=puedeNadar;
+    }
     @Override
     public String toString() {
         return "HabitatAcuatico []";
@@ -28,49 +42,4 @@ private class HabitatAcuatico extends Habitat {
         // TODO Auto-generated method stub
         return super.hashCode();
     }
-
-    private int cantidadEspeciesA;
-    private int cantidadAcuarios;
-    private String naturalezaMarina;
-    private int aforoA;
-    boolean puedeNadar;
-
-    public HabitatAcuatico(boolean puedeNadar/*faltan getter setter*/ */, float temperatura, float humedad, boolean limpieza, int aforoA, int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
-        super(temperatura, humedad, limpieza);
-        this.cantidadAcuarios=cantidadAcuarios;
-        this.cantidadEspeciesA=cantidadEspeciesA;
-        this.naturalezaMarina=naturalezaMarina;
-        this.aforoA=aforoA;
-        this.puedeNadar=puedeNadar;
-    }
-    public int getCantidadEspeciesA() {
-        return cantidadEspeciesA;
-    }
-
-    public void setCantidadEspeciesA(int cantidadEspeciesA) {
-        this.cantidadEspeciesA = cantidadEspeciesA;
-    }
-
-    public int getCantidadAcuarios() {
-        return cantidadAcuarios;
-    }
-
-    public void setCantidadAcuarios(int cantidadAcuarios) {
-        this.cantidadAcuarios = cantidadAcuarios;
-    }
-
-    public String getNaturalezaMarina() {
-        return naturalezaMarina;
-    }
-
-    public void setNaturalezaMarina(String naturalezaMarina) {
-        this.naturalezaMarina = naturalezaMarina;
-    }
-    public int getaforoA(){
-        return aforoA;
-    }
-    public void setaforoA(int aforoA){
-        this.aforoA=aforoA;
-    }
- 
 }

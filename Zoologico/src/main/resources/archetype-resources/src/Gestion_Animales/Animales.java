@@ -3,14 +3,12 @@ package Gestion_Animales;
 public class Animales {
     String nombre;
     String alimentacion;
-    boolean salud;//añadir en los constructores y super de als clases hijas 
-    boolean comportamiento;//esto tienen que ser funciones, borrarlo de aqui y de las clases hijas 
+    boolean salud;
+    boolean comportamiento;
     int edad;
     float peso;
     String especie;
-    int id;//añadir
-    
-    //cada uno hay que hacer la funcion
+    int id;
 
     public Animales(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id) {
         this.nombre = nombre;
@@ -150,15 +148,15 @@ public class Animales {
         System.out.println("la edad del animal: "+nombre+" es: "+edad);
     }
 
-    public void float registrarPeso(float peso){
+    public void registrarPeso(float peso){
         System.out.println("el peso de: "+nombre+" es de: "+peso);
     }
 
-    public void String registrarEspecie(String especie){
+    public void registrarEspecie(String especie){
         System.out.println("la especie de: "+nombre+" es: "+especie);
     }
 
-    public void int registrarID(int id){
+    public void registrarID(int id){
         System.out.println("el id de tu animal: "+nombre+" es: "+id);
     }
 

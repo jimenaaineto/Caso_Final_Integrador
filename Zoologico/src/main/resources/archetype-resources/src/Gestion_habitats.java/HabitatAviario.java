@@ -1,5 +1,19 @@
 package Gestion_habitats;
 private class HabitatAviario extends Habitat{
+
+    boolean puedeVolar;
+
+     public HabitatAviario(boolean puedeVolar, float temperatura, float humedad, boolean limpieza){
+        super(temperatura, humedad, limpieza);
+        this.puedeVolar=puedeVolar;
+    }
+    
+    public boolean howPuedeVolar(){
+        return puedeVolar;
+    }
+    public void setPuedeVolar(int puedeVolar){
+        this.puedeVolar=puedeVolar;
+    }
     @Override
     public String toString() {
         return "HabitatAviario []";
@@ -27,49 +41,5 @@ private class HabitatAviario extends Habitat{
     public int hashCode() {
         // TODO Auto-generated method stub
         return super.hashCode();
-    }
-
-    private int cantidadEspeciesAves;
-    private int cantidadNidos;
-    int aforoAves;
-    private String naturalezaAviaria;
-    boolean puedeVolar;
-
-     public HabitatAviario(boolean puedeVolar/*faltan getters setters */, float temperatura, float humedad, boolean limpieza, int aforoAves, int cantidadNidos, int cantidadEspeciesAves, String naturalezaAviaria){
-        super(temperatura, humedad, limpieza);
-        this.cantidadNidos=cantidadNidos;
-        this.cantidadEspeciesAves=cantidadEspeciesAves;
-        this.naturalezaAviaria=naturalezaAviaria;
-        this.aforoAves=aforoAves;
-        this.puedeVolar=puedeVolar;
-    }
-    public int getCantidadEspeciesAves() {
-        return cantidadEspeciesAves;
-    }
-
-    public void setCantidadEspeciesAves(int cantidadEspeciesAves) {
-        this.cantidadEspeciesAves = cantidadEspeciesAves;
-    }
-
-    public int getCantidadNidos() {
-        return cantidadNidos;
-    }
-
-    public void setCantidadNidos(int cantidadNidos) {
-        this.cantidadNidos = cantidadNidos;
-    }
-
-    public String getNaturalezaAviaria() {
-        return naturalezaAviaria;
-    }
-
-    public void setNaturalezaAviaria(String naturalezaAviaria) {
-        this.naturalezaAviaria = naturalezaAviaria;
-    }
-    public int getaforoAves(){
-        return aforoAves;
-    }
-    public void setaforoAves(int aforoAves){
-        this.aforoAves=aforoAves;
     }
 }
