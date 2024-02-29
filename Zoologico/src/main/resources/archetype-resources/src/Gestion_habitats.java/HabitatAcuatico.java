@@ -33,13 +33,15 @@ private class HabitatAcuatico extends Habitat {
     private int cantidadAcuarios;
     private String naturalezaMarina;
     private int aforoA;
+    boolean puedeNadar;
 
-    public HabitatAcuatico(float temperatura, float humedad, boolean limpieza, int aforoA, int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
+    public HabitatAcuatico(boolean puedeNadar/*faltan getter setter*/ */, float temperatura, float humedad, boolean limpieza, int aforoA, int cantidadAcuarios, int cantidadEspeciesA, String naturalezaMarina){
         super(temperatura, humedad, limpieza);
         this.cantidadAcuarios=cantidadAcuarios;
         this.cantidadEspeciesA=cantidadEspeciesA;
         this.naturalezaMarina=naturalezaMarina;
         this.aforoA=aforoA;
+        this.puedeNadar=puedeNadar;
     }
     public int getCantidadEspeciesA() {
         return cantidadEspeciesA;

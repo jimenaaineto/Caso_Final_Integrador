@@ -1,4 +1,4 @@
-package Caso_Final;
+package Gestion_Animales;
 private class AnimalesAviarios extends Animales{
     private String alimentacionAves;
     private String ecosistemaAves;

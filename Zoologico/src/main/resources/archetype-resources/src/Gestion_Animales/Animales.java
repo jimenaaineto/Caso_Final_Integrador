@@ -1,4 +1,4 @@
-package Caso_Final;
+package Gestion_Animales;
 
 public class Animales {
     private int edad;

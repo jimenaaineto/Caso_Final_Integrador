@@ -1,4 +1,4 @@
-package Caso_Final;
+package Gestion_Animales;
 private class AnimalesAcuaticos extends Animales{
     private String alimentacionA;
     private String ecosistemaA;

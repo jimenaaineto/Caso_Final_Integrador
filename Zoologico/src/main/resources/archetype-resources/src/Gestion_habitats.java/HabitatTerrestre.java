@@ -33,13 +33,16 @@ private class HabitatTerrestre extends Habitat{
     int aforoT;
     private int cantidadCharcas;
     private String naturalezaTerrestre;
+    boolean puedeCaminar;
 
-    public HabitatTerrestre(float temperatura, float humedad, boolean limpieza,int aforoT, int cantidadCharcas, int cantidadEspeciesT, String naturalezaTerrestre){
+    public HabitatTerrestre(boolean puedeCaminar/*faltan getters y setters*/,float temperatura, float humedad, boolean limpieza,int aforoT, int cantidadCharcas, int cantidadEspeciesT, String naturalezaTerrestre){
         super(temperatura, humedad, limpieza);
         this.cantidadCharcas=cantidadCharcas;
         this.cantidadEspeciesT=cantidadEspeciesT;
         this.naturalezaTerrestre=naturalezaTerrestre;
         this.aforo=aforoT;
+        this.puedeCaminar=puedeCaminar;
+
     }
 
     public int getCantidadEspeciesT() {
@@ -72,6 +75,7 @@ private class HabitatTerrestre extends Habitat{
     public void setaforoT(int aforoT){
         this.aforoT=aforoT;
     }
+    
 
     
        

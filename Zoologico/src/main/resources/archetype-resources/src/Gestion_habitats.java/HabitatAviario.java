@@ -33,13 +33,15 @@ private class HabitatAviario extends Habitat{
     private int cantidadNidos;
     int aforoAves;
     private String naturalezaAviaria;
+    boolean puedeVolar;
 
-     public HabitatAviario(float temperatura, float humedad, boolean limpieza, int aforoAves, int cantidadNidos, int cantidadEspeciesAves, String naturalezaAviaria){
+     public HabitatAviario(boolean puedeVolar/*faltan getters setters */, float temperatura, float humedad, boolean limpieza, int aforoAves, int cantidadNidos, int cantidadEspeciesAves, String naturalezaAviaria){
         super(temperatura, humedad, limpieza);
         this.cantidadNidos=cantidadNidos;
         this.cantidadEspeciesAves=cantidadEspeciesAves;
         this.naturalezaAviaria=naturalezaAviaria;
         this.aforoAves=aforoAves;
+        this.puedeVolar=puedeVolar;
     }
     public int getCantidadEspeciesAves() {
         return cantidadEspeciesAves;
