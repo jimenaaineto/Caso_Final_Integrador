@@ -2,39 +2,50 @@ package Gestion_Animales;
 private class AnimalesAviarios extends Animales{
     boolean pico;
     boolean plumaje;
-    boolean nocturnos //cambiar todos
-    private boolean vuela;//cambiar
+    boolean diurnos; //cambiar todos
+    boolean vuela;//cambiar
 
-    public AnimalesAviarios(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion, int edad, String tamaño, String origen, String nombre, boolean reproduccion, String alimentacionAves, String ecosistemaAves, boolean nadarAves){
-        super(alimentacion, salud, comportamiento, edad, tamaño, origen, nombre, reproduccion);
-        this.alimentacionAves=alimentacionAves;
-        this.ecosistemaAves=ecosistemaAves;
-        this.nadarAves=nadarAves;
+    public AnimalesAviarios(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id,boolean pico, boolean plumaje, boolean diurnos, boolean vuela){
+        super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
+        this.pico=pico;
+        this.plumaje=plumaje;
+        this.diurnos=diurnos;
+        this.vuela=vuela;
     }
 
-    public String getAlimentacionAves() {
-        return alimentacionAves;
+    public String getPico() {
+        return pico;
+    }
+    
+    public void setPico(String pico) {
+        this.pico = pico;
+    }
+    
+    public String getPlumaje() {
+        return plumaje;
+    }
+    
+    public void setPlumaje(String plumaje) {
+        this.plumaje = plumaje;
+    }
+    
+    public boolean isDiurnos() {
+        return diurnos;
+    }
+    
+    public void setDiurnos(boolean diurnos) {
+        this.diurnos = diurnos;
+    }
+    
+    public boolean doVuela() {
+        return vuela;
+    }
+    
+    public void setVuela(boolean vuela) {
+        this.vuela = vuela;
     }
 
-    public void setAlimentacionAves(String alimentacionAves) {
-        this.alimentacionAves = alimentacionAves;
-    }
-
-    public String getEcosistemaAves() {
-        return ecosistemaAves;
-    }
-
-    public void setEcosistemaAves(String ecosistemaAves) {
-        this.ecosistemaAves = ecosistemaAves;
-    }
-
-    public boolean isNadarAves() {
-        return nadarAves;
-    }
-
-    public void setNadarAves(boolean nadarAves) {
-        this.nadarAves = nadarAves;
-    }
+    
     @Override
     public String toString() {
         return "AnimalesAviarios []";

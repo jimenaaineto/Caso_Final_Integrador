@@ -2,37 +2,37 @@ package Gestion_Animales;
 private class AnimalesAcuaticos extends Animales{
     private String tipoAgua;//cambiar en el archivo entero lo que era alimentacion
     private boolean venenoso;//cambiar
-    private boolean muchosColores;
+    private boolean aletas;
 
-    public AnimalesAcuaticos(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion, String tipoAgua, String ecosistemaA, boolean muchosColores, int edad, String tamaño, String origen, String nombre, boolean reproduccion){
-        super(alimentacion, salud, comportamiento, edad, tamaño, origen, nombre, reproduccion);
+    public AnimalesAcuaticos(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id, String tipoAgua, boolean venenoso, boolean aletas){
+        super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);  
         this.tipoAgua=tipoAgua;
-        this.ecosistemA=ecosistemaA;
-        this.muchosColores=muchosColores;
+        this.venenoso=venenoso;
+        this.aletas=aletas;
     }
 
     public String getTipoAgua() {
         return tipoAgua;
     }
-
+    
     public void setTipoAgua(String tipoAgua) {
         this.tipoAgua = tipoAgua;
     }
-
-    public String getEcosistemaA() {
-        return ecosistemaA;
+    
+    public boolean isVenenoso() {
+        return venenoso;
     }
-
-    public void setEcosistemaA(String ecosistemaA) {
-        this.ecosistemaA = ecosistemaA;
+    
+    public void setVenenoso(boolean venenoso) {
+        this.venenoso = venenoso;
     }
-
-    public boolean isMuchosColores() {
-        return muchosColores;
+    
+    public boolean hasAletas() {
+        return aletas;
     }
-
-    public void setMuchosColores(boolean muchosColores) {
-        this.muchosColores = muchosColores;
+    
+    public void setAletas(boolean aletas) {
+        this.aletas = aletas;
     }
 
     @Override

@@ -1,52 +1,30 @@
 package Gestion_Animales;
 
 public class Animales {
+    String nombre;
     String alimentacion;
     boolean salud;//añadir en los constructores y super de als clases hijas 
     boolean comportamiento;//esto tienen que ser funciones, borrarlo de aqui y de las clases hijas 
-    private int edad;
-    private String tamaño;
-    private String origen;
-    private String nombre;
-    private boolean reproduccion;
+    int edad;
+    float peso;
+    String especie;
+    int id;//añadir
+    
     //cada uno hay que hacer la funcion
 
-    public Animales(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion) {
+    public Animales(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id) {
+        this.nombre = nombre;
         this.alimentacion=alimentacion;
         this.salud=salud;
         this.comportamiento=comportamiento;
         this.edad = edad;
-        this.tamaño = tamaño;
-        this.origen = origen;
-        this.nombre = nombre;
-        this.reproduccion=reproduccion;//faltan sus getters y setters de los 3 
+        this.peso = peso;
+        this.especie = especie;
+        this.id=id;//falta getter y setter
         
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public String getTamaño() {
-        return tamaño;
-    }
-
-    public void setTamaño(String tamaño) {
-        this.tamaño = tamaño;
-    }
-
-    public String getOrigen() {
-        return origen;
-    }
-
-    public void setOrigen(String origen) {
-        this.origen = origen;
-    }
-
+    
     public String getNombre() {
         return nombre;
     }
@@ -54,14 +32,61 @@ public class Animales {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public boolean isReproduccion(){
-        return reproduccion;
+    public String getAlimentacion() {
+        return alimentacion;
     }
 
-    public void setReproduccion(boolean reproduccion){
-        this.reproduccion=reproduccion;
+    public void setAlimentacion(String alimentacion) {
+        this.alimentacion = alimentacion;
     }
+
+    public boolean howSalud() {
+        return salud;
+    }
+
+    public void setSalud(boolean salud) {
+        this.salud = salud;
+    }
+
+    public boolean howComportamiento() {
+        return comportamiento;
+    }
+
+    public void setComportamiento(boolean comportamiento) {
+        this.comportamiento = comportamiento;
+    }
+
+    public int getEdad(){
+        return edad;
+    }
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public float getPeso() {
+        return peso;
+    }
+
+    public void setPeso(float peso) {
+        this.peso = peso;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public void setEspecie(String especie) {
+        this.especie = especie;
+    }
+
+    public int getID() {
+        return id;
+    }
+
+    public void setID(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Animales []";
@@ -91,27 +116,52 @@ public class Animales {
         return super.hashCode();
     }
 
+    public void registrarNombre (String nombre){
+        System.out.println("su nombre es: "+nombre);
+    }
+
     public void buenaSalud (boolean salud){
         if (salud==true){
-            System.out.println("el anomal se encuentra en buen estado de salud");
+            System.out.println("el animal: "+nombre+"  se encuentra en buen estado de salud");
         }else 
-        System.out.println("el animal se encuentra en mal estado de salud");
-    
-    }//hacerlo con los otros dos
+        System.out.println("el animal: "+nombre+"  se encuentra en mal estado de salud");
+    }
 
+    public void buenComportamiento(boolean comportamiento){
+        if(comportamiento==true){
+            System.out.println("el comportamiento de: "+nombre+" es bueno");
+        }else 
+        System.out.println("el comportamiento de: "+nombre+" no es bueno");
+    } 
 
-//hacer metodos con los atributos
-    //metodo para registrar la alimentacion y asi con comportamiento y salud  
     public void regirtrarAlimentacion(String alimento){
-        System.out.println("el animal ha sido ha sido aliemntado con "+alimento);
+        System.out.println("el animal: "+nombre+" ha sido ha sido alimentado con "+alimento);
     }
+
     public void registrarComportamento(boolean comportamiento){
-        System.out.println("el animal ha sido ha sido aliemntado con "+comportamiento);
+        System.out.println(buenComportamiento(comportamiento));
     }
+
     public void registrarSalud( boolean salud){
-        
         System.out.println(buenaSalud(salud));
     }
+
+    public void registrarEdad (int edad){
+        System.out.println("la edad del animal: "+nombre+" es: "+edad);
+    }
+
+    public void float registrarPeso(float peso){
+        System.out.println("el peso de: "+nombre+" es de: "+peso);
+    }
+
+    public void String registrarEspecie(String especie){
+        System.out.println("la especie de: "+nombre+" es: "+especie);
+    }
+
+    public void int registrarID(int id){
+        System.out.println("el id de tu animal: "+nombre+" es: "+id);
+    }
+
 }
 
     

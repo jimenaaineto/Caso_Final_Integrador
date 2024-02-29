@@ -2,12 +2,12 @@ package Gestion_Animales;
 private class AnimalesTerrestres extends Animales{
     
     private class AnimalesTerrestres extends Animales{
-        private int numeroPatas;
-        private String alimentacionT;
-        private boolean nadarT;
+        int numeroPatas;
+        boolean pelaje;
+        boolean caminar;
 
-        public AnimalesTerrestres(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion, int edad, String tamaño, String origen, String nombre, boolean reproduccion, int numeroPatas, String alimentacionT, boolean nadarT){
-            super(alimentacion, salud, comportamiento, edad, tamaño, origen, nombre, reproduccion);
+        public AnimalesTerrestres(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id,boolean pico, boolean plumaje, boolean diurnos, boolean vuela){
+            super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
             this.numeroPatas=numeroPatas;
             this.alimentacionT=alimentacionT;
             this.nadarT=nadarT;
