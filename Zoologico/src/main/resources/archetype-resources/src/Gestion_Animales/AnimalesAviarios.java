@@ -1,11 +1,12 @@
 package Gestion_Animales;
 private class AnimalesAviarios extends Animales{
-    private String alimentacionAves;
-    private String ecosistemaAves;
-    private boolean nadarAves;
+    boolean pico;
+    boolean plumaje;
+    boolean nocturnos //cambiar todos
+    private boolean vuela;//cambiar
 
-    public AnimalesAviarios(int edad, String tamaño, String origen, String nombre, boolean reproduccion, String alimentacionAves, String ecosistemaAves, boolean nadarAves){
-        super(edad, tamaño, origen, nombre, reproduccion);
+    public AnimalesAviarios(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion, int edad, String tamaño, String origen, String nombre, boolean reproduccion, String alimentacionAves, String ecosistemaAves, boolean nadarAves){
+        super(alimentacion, salud, comportamiento, edad, tamaño, origen, nombre, reproduccion);
         this.alimentacionAves=alimentacionAves;
         this.ecosistemaAves=ecosistemaAves;
         this.nadarAves=nadarAves;
@@ -33,6 +34,34 @@ private class AnimalesAviarios extends Animales{
 
     public void setNadarAves(boolean nadarAves) {
         this.nadarAves = nadarAves;
+    }
+    @Override
+    public String toString() {
+        return "AnimalesAviarios []";
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        // TODO Auto-generated method stub
+        return super.clone();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        // TODO Auto-generated method stub
+        super.finalize();
+    }
+
+    @Override
+    public int hashCode() {
+        // TODO Auto-generated method stub
+        return super.hashCode();
     }
 
 }
