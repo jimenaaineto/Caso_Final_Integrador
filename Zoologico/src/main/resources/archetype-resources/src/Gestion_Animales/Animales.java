@@ -1,14 +1,15 @@
 package Gestion_Animales;
 
 public class Animales {
-    boolean alimentacion;
-    boolean salud;
-    boolean comportamiento;
+    String alimentacion;
+    boolean salud;//añadir en los constructores y super de als clases hijas 
+    boolean comportamiento;//esto tienen que ser funciones, borrarlo de aqui y de las clases hijas 
     private int edad;
     private String tamaño;
     private String origen;
     private String nombre;
     private boolean reproduccion;
+    //cada uno hay que hacer la funcion
 
     public Animales(boolean alimentacion, boolean salud, boolean comportamiento, /*faltan getters y setters*/int edad, String tamaño, String origen, String nombre, boolean reproduccion) {
         this.alimentacion=alimentacion;
@@ -18,7 +19,7 @@ public class Animales {
         this.tamaño = tamaño;
         this.origen = origen;
         this.nombre = nombre;
-        this.reproduccion=reproduccion;
+        this.reproduccion=reproduccion;//faltan sus getters y setters de los 3 
         
     }
 
@@ -88,6 +89,28 @@ public class Animales {
     public int hashCode() {
         // TODO Auto-generated method stub
         return super.hashCode();
+    }
+
+    public void buenaSalud (boolean salud){
+        if (salud==true){
+            System.out.println("el anomal se encuentra en buen estado de salud");
+        }else 
+        System.out.println("el animal se encuentra en mal estado de salud");
+    
+    }//hacerlo con los otros dos
+
+
+//hacer metodos con los atributos
+    //metodo para registrar la alimentacion y asi con comportamiento y salud  
+    public void regirtrarAlimentacion(String alimento){
+        System.out.println("el animal ha sido ha sido aliemntado con "+alimento);
+    }
+    public void registrarComportamento(boolean comportamiento){
+        System.out.println("el animal ha sido ha sido aliemntado con "+comportamiento);
+    }
+    public void registrarSalud( boolean salud){
+        
+        System.out.println(buenaSalud(salud));
     }
 }
 
