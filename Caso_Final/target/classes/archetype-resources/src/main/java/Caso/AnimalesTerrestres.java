@@ -3,7 +3,7 @@ private class AnimalesTerrestres extends Animales{
     private String alimentacionT;
     private boolean nadarT;
 
-    public AnimalesTerrestres(int edad, String tamaño, String origen, String nombre, int numeroPatas, String alimentacionT, boolean nadarT){
+    public AnimalesTerrestres(int edad, String tamaño, String origen, String nombre, boolean reproduccion, int numeroPatas, String alimentacionT, boolean nadarT){
         super(edad, tamaño, origen, nombre, reproduccion);
         this.numeroPatas=numeroPatas;
         this.alimentacionT=alimentacionT;

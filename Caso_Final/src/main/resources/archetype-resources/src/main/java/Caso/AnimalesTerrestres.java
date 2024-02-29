@@ -1,3 +1,4 @@
+package Caso_Final;
 private class AnimalesTerrestres extends Animales{
     private int numeroPatas;
     private String alimentacionT;
