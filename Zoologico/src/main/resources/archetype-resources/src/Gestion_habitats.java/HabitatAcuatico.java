@@ -42,4 +42,10 @@ private class HabitatAcuatico extends Habitat {
         // TODO Auto-generated method stub
         return super.hashCode();
     }
+    public void comprobarPuedeNadar (boolean puedeNadar){
+        if (puedeNadar==true){
+            system.out.println("el animal: " +nombre+ " pertenece al habitat acuatico");
+        }else 
+            system.out.println("el animal: "+nombre+ " no pertenece al habitat acuatico");
+    }
 }
