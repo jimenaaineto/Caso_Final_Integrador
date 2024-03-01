@@ -45,6 +45,12 @@ private class HabitatTerrestre extends Habitat{
         return super.hashCode();
     }
     
+    public void comprobarPuedeCaminar (boolean puedeCaminar){
+        if (puedeCaminar==true){
+            system.out.println("el animal: " +nombre+ " pertenece al habitat terrestte");
+        }else 
+            system.out.println("el animal: "+nombre+ " no pertenece al habitat terrestre");
+    }
        
         }
 
