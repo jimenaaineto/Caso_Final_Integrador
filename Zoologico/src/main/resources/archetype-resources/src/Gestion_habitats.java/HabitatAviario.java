@@ -42,4 +42,11 @@ private class HabitatAviario extends Habitat{
         // TODO Auto-generated method stub
         return super.hashCode();
     }
+
+    public void comprobarPuedeVolar (boolean puedeVolar){
+        if (puedeVolar==true){
+            system.out.println("el animal: " +nombre+ " pertenece al habitat aviario ");
+        }else 
+            system.out.println("el animal: "+nombre+ " no pertenece al habitat aviario ");
+    }
 }
