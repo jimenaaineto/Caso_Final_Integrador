@@ -1,6 +1,6 @@
 import java.security.spec.EncodedKeySpec;
 import java.util.Scanner;
-import random
+import java.util.Random;
 
 import Gestion_Animales.*;
 import Gestion_habitats.*;
@@ -10,6 +10,8 @@ public class App {
     {
         System.out.println( "Hello World!" );
         int llamarSeleccionHabitatAnimal=seleccionarHabitatAnimal();
+        Animal minimos=crearAnimalMinimos();
+        Animal animalFinal=crearAnimal(llamarSeleccionHabitatAnimal, minimos, animalFinal);
         
 
     }
@@ -71,47 +73,48 @@ public class App {
             default:
                 break;
         }
-        nuevoAnimal=new Animal(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
-        return;
+        nuevoAnimal=new Animal(crearAnimalMinimos());
+        return nuevoAnimal;
         
     }
 
-    public static Animal crearAnimalMinimos(){
+    public static Animal crearAnimalMinimos(Animal minimoAnimal){
             Scanner nombre=new Scanner(System.in);
             System.out.println("Introduzca el nombre del animal: ");
-            String nombre=nombre.nextLine();
-            
-            Random ID = new  Random()%1000;
-            System.out.println("El ID de su animal es: "+ID);
+            String nombreA=nombre.nextLine();
+
+            Random random = new Random();
+            int ID = random.nextInt(1000);
+            System.out.println("El ID de su animal es: " + ID);
 
             //el ID tiene que ser distinto apra cada uno como hacerlo 
 
             Scanner especie=new Scanner(System.in);
             System.out.println("¿A qué especie pertenece el animal?: ");
-            String especie=especie.nextLine();
+            String especieA=especie.nextLine();
 
             Scanner edad=new Scanner(System.in);
             System.out.println("Edad del animal: ");
-            int edad=edad.nextInt();
+            int edadA=edad.nextInt();
 
             Scanner peso=new Scanner(System.in);
             System.out.println("¿Cuánto pesa el animal? (en kg)");
-            float peso=peso.nextFloat();
+            float pesoA=peso.nextFloat();
 
             Scanner alimentacion=new Scanner(System.in);
             System.out.println("Introduzca el alimento del animal: ");
-            String alimentacion=alimentacion.nextLine();
+            String alimentacionA=alimentacion.nextLine();
 
             Scanner salud=new Scanner(System.in);
             System.out.println("¿Cómo es la salud del animal?\n1 es buena salud\n0 es mala salud");
-            boolean salud=salud.hasNext();
+            boolean saludA=salud.hasNext();
 
             Scanner comportamiento=new Scanner(System.in);
             System.out.println("¿Cómo es el comportamiento del animal?\n-1 es buen comportamiento\n-0 es mal comportamiento");
-            boolean comportamiento=comportamiento.hasNext();
+            boolean comportamientoA=comportamiento.hasNext();
 
-            return;
+            minimoAnimal=new Animal(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
+            return minimoAnimal;
     }
     
-}
 }
