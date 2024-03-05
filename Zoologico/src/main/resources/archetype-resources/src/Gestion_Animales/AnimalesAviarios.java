@@ -1,25 +1,16 @@
 package Gestion_Animales;
 private class AnimalesAviarios extends Animales{
-    boolean pico;
     boolean plumaje;
     boolean diurnos; //cambiar todos
     boolean vuela;//cambiar
 
-    public AnimalesAviarios(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id,boolean pico, boolean plumaje, boolean diurnos, boolean vuela){
+    public AnimalesAviarios(String nombre, String alimentacion, boolean salud, boolean comportamiento, int edad, float peso, String especie, int id, boolean plumaje, boolean diurnos, boolean vuela){
         super(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id);
-        this.pico=pico;
         this.plumaje=plumaje;
         this.diurnos=diurnos;
         this.vuela=vuela;
     }
 
-    public String getPico() {
-        return pico;
-    }
-    
-    public void setPico(String pico) {
-        this.pico = pico;
-    }
     
     public String getPlumaje() {
         return plumaje;
