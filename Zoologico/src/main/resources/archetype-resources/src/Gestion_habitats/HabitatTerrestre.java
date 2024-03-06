@@ -3,7 +3,7 @@ private class HabitatTerrestre extends Habitat{
 
     boolean puedeCaminar;
 
-    public HabitatTerrestre(boolean puedeCaminar/*faltan getters y setters*/,float temperatura, float humedad, boolean limpieza){
+    public HabitatTerrestre(boolean puedeCaminar,float temperatura, float humedad, boolean limpieza){
         super(temperatura, humedad, limpieza);
         this.puedeCaminar=puedeCaminar;
 

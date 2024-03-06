@@ -4,27 +4,109 @@ import java.util.Random;
 
 import Gestion_Animales.*;
 import Gestion_habitats.*;
+import Gestion_Visitantes.*;
 
 public class App {
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
         int llamarSeleccionHabitatAnimal=seleccionarHabitatAnimal();
-        Animal minimos=crearAnimalMinimos();
-        Animal animalFinal=crearAnimal(llamarSeleccionHabitatAnimal, minimos, animalFinal);
+        
         
 
     }
 
+    public static int seleccionarMenu(){
+        System.out.println("Elija la opcion que desee realizar: ");
+        Scanner opcion=new Scanner(System.in);
+        System.out.println("1.Añadir animal al sistema\n2.Gestion habitats\n3.Interaccion visitantes\n5.Administracion de recursos\n6.Mantenimiento y seguridad");
+        int elegirMenu=opcion.nextInt();
+        return elegirMenu;
+        switch (elegirMenu) {
+            case 1:
+                System.out.println("¿A qué habitat pertenece su animal?: ");
+                crearAnimal();
+
+            case 2:
+                gestionarHabitatMinimos();
+                
+                break;
+        
+            default:
+                break;
+        }
+        }
+    
+
+    
     public static int seleccionarHabitatAnimal(){
-        System.out.println("Elija el habitat del animal que desea crear: ");
-        System.out.println("1. Terrestre \n2. Acuatico \n3.Aviario");
         Scanner habitatAnimal=new Scanner(System.in);
+        System.out.println("1. Terrestre \n2. Acuatico \n3.Aviario");
         int eleccion=habitatAnimal.nextInt();
         return eleccion;
     }
 
-    public static Animal crearAnimal(int seleccionarHabitatAnimal, Animal crearAnimalMinimos, Animal nuevoAnimal){
+    public static Habitat gestionarHabitatMinimos (){
+        System.out.println("Elija el habitat desea gestionar: ");
+        seleccionarHabitatAnimal();
+        System.out.println("¿Como son las condiciones del habitat seleccionado?");
+
+        Scanner gestionLimpieza=new Scanner(System.in);
+        System.out.println("Limpieza: \n1.Está limpio\n2.No está limpio");
+        boolean leergestionLimpieza=gestionLimpieza.hasNext();
+
+        Scanner gestionTemp=new Scanner(System.in);
+        System.out.println("Temperatura: ");
+        float leergestionTemp=gestionTemp.nextFloat();
+
+        Scanner gestionHumedad=new Scanner(System.in);
+        System.out.println("Humedad: ");
+        float leergestionHumedad=gestionHumedad.nextFloat();
+
+        Habitat habitatGestionado=new Habitat(leergestionTemp, leergestionHumedad, leergestionLimpieza);
+        return habitatGestionado;
+    }
+
+    public static int interaccionVisitantes(){
+        System.out.println("¿Qué desea?: ");
+        Scanner interaccion=new Scanner(System.in);
+        System.out.println("1.Tours personalizados\n2.Quiosco virtual");
+        int leerinteraccion=interaccion.nextInt();
+        switch (leerinteraccion) {
+            case 1:
+                
+                break;
+        
+            default:
+                break;
+        }
+    }
+
+    public static int administracionRecursos(){
+        System.out.println("Seleccione la opcion que desea realizar: ");
+        Scanner admin=new Scanner(System.in);
+        System.out.println("1. Ver inventario\n2. Ver pedidos\n3. Control recursos");
+        int leeradmin=admin.nextInt();
+        switch (leeradmin) {
+            case 1:
+                //mostrar clase
+                break;
+
+            case 2: 
+                //mostrar clase???
+                break;
+
+            case 3:
+            //mostrar
+            break;
+        
+            default:
+                break;
+        }
+    }
+   
+    public static Animal[][] crearAnimal(){
+        seleccionarHabitatAnimal();
         System.out.println("A continuación deberá introducir los datos requeridos: ");
         crearAnimalMinimos();
         switch (eleccion) {
@@ -73,7 +155,8 @@ public class App {
             default:
                 break;
         }
-        nuevoAnimal=new Animal(crearAnimalMinimos());
+        
+        Animal [][]nuevoAnimal = new Animal[crearAnimalMinimos(nombre, alimentacion, salud, comportamiento, edad, peso, especie, id)][];
         return nuevoAnimal;
         
     }
