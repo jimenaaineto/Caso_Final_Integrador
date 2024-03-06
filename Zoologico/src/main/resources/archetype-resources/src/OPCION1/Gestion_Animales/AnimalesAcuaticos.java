@@ -11,8 +11,10 @@ private class AnimalesAcuaticos extends Animales{
         this.aletas=aletas;
     }
 
+
     public String getTipoAgua() {
         return tipoAgua;
+        
     }
     
     public void setTipoAgua(String tipoAgua) {

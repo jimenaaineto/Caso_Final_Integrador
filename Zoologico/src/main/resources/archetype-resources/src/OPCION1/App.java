@@ -31,7 +31,9 @@ public class App {
                 gestionarHabitatMinimos();
                 
                 break;
-        
+
+            case 3: 
+                interaccionVisitantes();
             default:
                 break;
         }
@@ -74,12 +76,43 @@ public class App {
         int leerinteraccion=interaccion.nextInt();
         switch (leerinteraccion) {
             case 1:
-                
+                toursPersonalizados();
                 break;
         
             default:
                 break;
         }
+    }
+
+    public static void toursPersonalizados(){
+
+        Scanner tour=new Scanner(System.in);
+        System.out.println("Estos son los tours que ofrece el zoologico: ");
+        System.out.println("1. Para amantes de los mamiferos\n2. Para amantes de los animales acuaticos\n3. Para amantes de las aves\n4. Tour familiar completo");
+        int leerTour=tour.nextInt();
+        switch (leerTour) {
+            case 1:
+                System.out.println("Venga a disfrutar de nuestros mamiferos con el tour de MAMIFEROS." );
+                Tours_personalizados.isquiereAcuaticos;
+                System.out.println("En primer lugar, debera acceder por la puerta......y hacer...");
+                break;
+
+            case 2:
+                System.out.println("Venga a disfrutar de nuestros animales acuaticos con el tour MARINO." );
+                System.out.println("En primer lugar, debera acceder por la puerta......y hacer...");
+        
+            case 3: 
+                System.out.println("Venga a disfrutar de nuestras aves con el tour AVIARIO." );
+                System.out.println("En primer lugar, debera acceder por la puerta......y hacer...");
+
+            case 4: 
+                System.out.println("Venga a disfrutar de nuestros parque con el tour de dia completo ." );
+                System.out.println("En primer lugar, debera acceder por la puerta......y hacer...");
+            default:
+                break;
+        }
+        
+
     }
 
     public static int administracionRecursos(){
